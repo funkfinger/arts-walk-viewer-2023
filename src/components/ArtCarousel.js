@@ -3,8 +3,6 @@ import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 
-import ArtCarouselItem from "./ArtCarouselItem";
-
 import { ProjectData } from "../data/data";
 
 console.log(ProjectData);
