@@ -51,8 +51,16 @@ const ArtCarousel = () => {
         {ProjectData.map((p) => {
           return (
             <div key={p.id}>
-              <Card style={{ width: "16rem" }}>
-                <Card.Img variant="top" src={p.img} />
+              <Card style={{ width: "18rem" }}>
+                <Card.Img
+                  variant="top"
+                  src={p.img}
+                  onClick={() => {
+                    setProject(p);
+                    setShow(true);
+                    console.log(show);
+                  }}
+                />
                 <Card.Body>
                   <Card.Title>{p.title}</Card.Title>
                   <Card.Subtitle>{p.artist}</Card.Subtitle>
@@ -65,7 +73,7 @@ const ArtCarousel = () => {
                       console.log(show);
                     }}
                   >
-                    Open {p.title}
+                    Open Project
                   </Button>
                 </Card.Body>
               </Card>

@@ -5,13 +5,13 @@ function App() {
   return (
     <Container>
       <header className="App-header">
-        <h1>
+        <h1 className="head">
           <img
             src="/images/pcds-arts-walk-water-bottle.png"
             alt="PCDS Arts Walk water bottle logo"
             className="pcds-arts-walk-logo"
           />
-          Welcome to PCDS Arts Walk 2023
+          PCDS Arts Walk 2023 - Coding As Art
         </h1>
       </header>
       <ArtCarousel />

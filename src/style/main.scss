@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 body {
-  background-color: lightblue;
+  background-color: navy;
 }
 
 .card-text {
@@ -19,4 +19,20 @@ body {
 
 .modal-90w {
   min-width: 90%;
+}
+
+.card {
+  border-width: 4px;
+}
+
+.card-body {
+  background-color: goldenrod;
+}
+
+.head {
+  color: goldenrod;
+}
+
+.card-title {
+  color: white;
 }

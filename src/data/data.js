@@ -24,11 +24,11 @@ export const ProjectData = [
     url: "/p5js-projects/ahmend/index.html",
     img: "/p5js-projects/ahmend/thumb.png",
     description:
-      "At first I had very little idea on what to do for this project but I decided to recreate the iconic game of Snake. To play the game, simply use the WASD keys to move accordingly to eat the red squares which are food. Also avoid colliding with the walls or yourself in order to keep playing.",
+      "I recreated the iconic game of Snake. To play the game, simply use the WASD keys to move accordingly to eat the red squares which are food. Also avoid colliding with the walls or yourself in order to keep playing.",
   },
   {
     artist: "Aila	Kaibara",
-    title: "Snowman Minus the Man Plus a House",
+    title: "Snowman - Man + House",
     id: 1,
     url: "/p5js-projects/aila/index.html",
     img: "/p5js-projects/aila/thumb.png",
@@ -70,14 +70,6 @@ export const ProjectData = [
     description: "Click the mouse to watch fish appear! ",
   },
   {
-    artist: "Rachel Coviello",
-    title: "Under the Sea",
-    id: 1,
-    url: "/p5js-projects/rachel/index.html",
-    img: "/p5js-projects/rachel/thumb.png",
-    description: "Click the mouse to watch fish appear! ",
-  },
-  {
     artist: "Diego Hernandez",
     title: "Bouncy Circles",
     id: 1,
@@ -93,5 +85,40 @@ export const ProjectData = [
     img: "/p5js-projects/ryan/thumb.png",
     description:
       "Inspired by waveform collapse, this project uses an iterative elimination of candidates followed by assigning each box a value.",
+  },
+  {
+    artist: "Aila	Kaibara",
+    title: "Paint rollin' into summer",
+    id: 1,
+    url: "/p5js-projects/aila2/index.html",
+    img: "/p5js-projects/aila2/thumb.png",
+    description:
+      "This is an interactive coding project, you can touch the blue color and paint with blue as well as red!",
+  },
+  {
+    artist: "Aila	Kaibara",
+    title: "Eggs for all three meals!",
+    id: 1,
+    url: "/p5js-projects/aila3/index.html",
+    img: "/p5js-projects/aila3/thumb.png",
+    description:
+      "If you click on the plates, eggs will generate with each click! I created this using the MouseIsPressed function.",
+  },
+  {
+    artist: "Sonia Singh",
+    title: "Interactive Kaleidoscope",
+    id: 1,
+    url: "/p5js-projects/sonia/index.html",
+    img: "/p5js-projects/sonia/thumb.png",
+    description:
+      "Click and drag in the black box to create a kaleidoscope pattern",
+  },
+  {
+    artist: "Jack Moriarty",
+    title: "Perspective in Code",
+    id: 1,
+    url: "https://www.desmos.com/calculator/igrg1ry82t",
+    img: "/p5js-projects/jack1/thumb.png",
+    description: "A perspective drawing created with code",
   },
 ];
