@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-
+import React, { useState, useRef } from "react";
 import Container from "react-bootstrap/Container";
 // import Carousel from "react-bootstrap/Carousel";
 import Carousel from "react-multi-carousel";
@@ -7,11 +6,11 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Modal from "react-bootstrap/Modal";
 
+// import ProjectModal from "./ProjectModal";
+
 import "react-multi-carousel/lib/styles.css";
 
 import { ProjectData } from "../data/data";
-
-console.log(ProjectData);
 
 const responsive = {
   superLargeDesktop: {
@@ -36,7 +35,10 @@ const responsive = {
 const ArtCarousel = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const ref = useRef();
+
+  const [project, setProject] = useState(ProjectData[0]);
+
   return (
     <Container fluid>
       <Carousel
@@ -46,17 +48,24 @@ const ArtCarousel = () => {
         autoPlay={true}
         centerMode={true}
       >
-        {ProjectData.map((project) => {
+        {ProjectData.map((p) => {
           return (
-            <div>
+            <div key={p.id}>
               <Card style={{ width: "16rem" }}>
-                <Card.Img variant="top" src={project.img} />
+                <Card.Img variant="top" src={p.img} />
                 <Card.Body>
-                  <Card.Title>{project.title}</Card.Title>
-                  <Card.Subtitle>{project.artist}</Card.Subtitle>
-                  <Card.Text>{project.description}</Card.Text>
-                  <Button variant="primary" onClick={handleShow}>
-                    Go somewhere
+                  <Card.Title>{p.title}</Card.Title>
+                  <Card.Subtitle>{p.artist}</Card.Subtitle>
+                  <Card.Text>{p.description}</Card.Text>
+                  <Button
+                    variant="primary"
+                    onClick={() => {
+                      setProject(p);
+                      setShow(true);
+                      console.log(show);
+                    }}
+                  >
+                    Open {p.title}
                   </Button>
                 </Card.Body>
               </Card>
@@ -64,17 +73,33 @@ const ArtCarousel = () => {
           );
         })}
       </Carousel>
-      <Modal show={show} onHide={handleClose}>
+
+      <Modal
+        // size="lg"
+        show={show}
+        onHide={handleClose}
+        dialogClassName="modal-90w"
+      >
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>{project.title}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Body>
+          <iframe
+            ref={ref}
+            // onLoad={onLoad}
+            // height={height}
+            height="900px"
+            width="100%"
+            title="project"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            src={project.url}
+          ></iframe>
+        </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
           <Button variant="primary" onClick={handleClose}>
-            Save Changes
+            Close
           </Button>
         </Modal.Footer>
       </Modal>
