@@ -36,14 +36,15 @@ export const ProjectData = [
     artist: "Coding 1 Class",
     title: "Flow Field",
     id: 1,
-    link: "/p5js-projects/jayw/flow-field/index.html",
+    link: "/p5js-projects/jayw/index.html",
     img: "/p5js-projects/jayw/thumb.png",
+    description: "An exercise where we created a flow field with particles",
   },
   {
     artist: "Dilan Desai",
     title: "Project",
     id: 1,
     link: "https://big-d-artswalk.netlify.app/",
-    img: "/p5js-projects/imgs/big-d-artswalk.png",
+    img: "/p5js-projects/dilan/thumb.png",
   },
 ];

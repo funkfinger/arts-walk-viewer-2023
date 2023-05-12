@@ -1,8 +1,11 @@
+import React, { useState } from "react";
+
 import Container from "react-bootstrap/Container";
 // import Carousel from "react-bootstrap/Carousel";
 import Carousel from "react-multi-carousel";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Modal from "react-bootstrap/Modal";
 
 import "react-multi-carousel/lib/styles.css";
 
@@ -31,6 +34,9 @@ const responsive = {
 };
 
 const ArtCarousel = () => {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <Container fluid>
       <Carousel
@@ -49,13 +55,29 @@ const ArtCarousel = () => {
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Subtitle>{project.artist}</Card.Subtitle>
                   <Card.Text>{project.description}</Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <Button variant="primary" onClick={handleShow}>
+                    Go somewhere
+                  </Button>
                 </Card.Body>
               </Card>
             </div>
           );
         })}
       </Carousel>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Container>
   );
 };
