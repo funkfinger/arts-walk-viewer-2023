@@ -44,7 +44,7 @@ const ArtCarousel = () => {
       <Carousel
         responsive={responsive}
         infinite={true}
-        transitionDuration={3000}
+        // transitionDuration={3000}
         autoPlay={true}
         centerMode={true}
       >

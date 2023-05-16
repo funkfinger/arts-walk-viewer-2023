@@ -121,4 +121,22 @@ export const ProjectData = [
     img: "/p5js-projects/jack1/thumb.png",
     description: "A perspective drawing created with code",
   },
+  {
+    artist: "Samantha Daitch",
+    title: "Time flies",
+    id: 1,
+    url: "/p5js-projects/samantha/index.html",
+    img: "/p5js-projects/samantha/thumb.png",
+    description:
+      "This clock accurately tells the time based on what the computer is set to.",
+  },
+  {
+    artist: "Samantha Daitch",
+    title: "Something smells fishy...",
+    id: 1,
+    url: "/p5js-projects/samantha2/index.html",
+    img: "/p5js-projects/samantha2/thumb.png",
+    description:
+      "These fish swim through the ocean in a loop and appear in random sizes and colors.",
+  },
 ];
